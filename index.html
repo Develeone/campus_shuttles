@@ -18,16 +18,59 @@
 <link rel="stylesheet" href="leaflet.css"/>
 <script src="leaflet.js"></script>
 
+<script type="text/javascript" src="https://vk.com/js/api/share.js?95" charset="windows-1251"></script>
+
+    <meta property="og:title" content="Карта шаттлов Кампуса ДВФУ - Информер" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="/shuttles" />
+    <meta property="og:site_name" content="Awake! - создание сайтов, разработка приложений во Владивостоке" />
+    <meta property="og:description" content="Посмотреть, где в текущий момент находится каждый шаттл Кампуса ДВФУ можно на этой карте" />
+
+
+    <meta property="og:image" content="http://inf.awake.su/shuttles/preview.jpg" />
+    <meta property="og:image:secure_url" content="http://inf.awake.su/shuttles/preview.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="601" />
+    <meta property="og:image:height" content="316" />
+
+    <meta property="og:image" content="http://inf.awake.su/shuttles/preview.jpg" />
+    <meta property="og:image:secure_url" content="http://inf.awake.su/shuttles/preview.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1201" />
+    <meta property="og:image:height" content="631" />
+
+    <meta property="og:image" content="http://inf.awake.su/shuttles/preview.jpg" />
+    <meta property="og:image:secure_url" content="http://inf.awake.su/shuttles/preview.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="256" />
+    <meta property="og:image:height" content="256" />
+
+    <meta property="twitter:image" content="http://inf.awake.su/shuttles/preview.jpg" />
+
 <style>
 	* {
 		margin: 0;
 		padding: 0;
+        font-family: Arial, SansSerif, "Droid Sans";
 	}
 
-	.buses-map {
-		width:100%;
-		height: 100%;
+	.modal {
+        position: absolute;
+        top: 25%;
+        left: 25%;
+        width: 50%;
+        height: 50%;
+		max-width: 80%;
+		max-height: 80%;
+        z-index: 99999;
+        background: #ebebeb;
+        border-radius: 10px;
+        box-shadow: 0 0 50px #6b868e;
+        padding: 15px;
+        text-align: center;
+        display: none;
 	}
+
 </style>
 
 <script>
@@ -118,7 +161,18 @@ $(document).ready( function(page) {
         ";"+Math.random();</script><!--/LiveInternet-->
 
 
+
 <div id="buses-map" style="width:100%; height: 100%;"></div>
+
+<div class="modal">
+    Пожалуйста, поделитесь сервисом с друзьями
+
+    <br /><br />
+
+    <script type="text/javascript"><!--
+    document.write(VK.Share.button({url: "http://inf.awake.su/shuttles"},{type: "custom", text: "<img src=\"https://vk.com/images/share_32.png\" width=\"32\" height=\"32\" />"}));
+    --></script>
+</div>
 
 </body>
 </html>
