@@ -13,6 +13,8 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#6495ed">
 <meta name="theme-color" content="#6495ed">
 
+    <link rel="manifest" href="/manifest.json">
+
     <link rel="apple-touch-icon" href="//inf.awake.su/shuttles/bus_marker.png"/>
     <link rel="apple-touch-icon-precomposed" sizes="57x57" href="//inf.awake.su/shuttles/bus_marker.png"/>
     <meta name="msapplication-square70x70logo" content="//inf.awake.su/shuttles/bus_marker.png"/>
@@ -170,6 +172,27 @@ $(document).ready( function(page) {
     $(".modal .close").click(function(){
         $(".modal").fadeOut();
     });
+});
+
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/sw.js').then(function(registration) {
+            // Registration was successful
+            console.log('ServiceWorker registration successful with scope: ', registration.scope);
+        }, function(err) {
+            // registration failed :(
+            console.log('ServiceWorker registration failed: ', err);
+        });
+    });
+}
+
+self.addEventListener('install', function(event) {
+    alert("install");
+});
+
+self.addEventListener('fetch', function(event) {
+    alert(event);
+    event.respondWith(event);
 });
 
 </script>

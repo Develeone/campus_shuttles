@@ -1,0 +1,21 @@
+{
+  "short_name": "Шаттлы",
+  "name": "Карта Шаттлов Кампуса ДВФУ",
+  "icons": [
+    {
+      "src": "bus_marker.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "bus_marker.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/shuttles",
+  "background_color": "#6495ed",
+  "display": "standalone",
+  "scope": "/shuttles/",
+  "theme_color": "#6495ed"
+}
