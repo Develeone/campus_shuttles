@@ -3,12 +3,12 @@
   "name": "Карта Шаттлов Кампуса ДВФУ",
   "icons": [
     {
-      "src": "bus_marker.png",
+      "src": "192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "bus_marker.png",
+      "src": "512.png",
       "type": "image/png",
       "sizes": "512x512"
     }
