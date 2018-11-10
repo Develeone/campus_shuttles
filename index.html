@@ -13,13 +13,13 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#6495ed">
 <meta name="theme-color" content="#6495ed">
 
-    <link rel="apple-touch-icon" href="http://inf.awake.su/shuttles/bus_marker.png"/>
-    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="http://inf.awake.su/shuttles/bus_marker.png"/>
-    <meta name="msapplication-square70x70logo" content="http://inf.awake.su/shuttles/bus_marker.png"/>
-    <meta name="favicon" content="http://inf.awake.su/shuttles/bus_marker.png"/>
-    <link rel="icon" type="image/png" href="http://inf.awake.su/shuttles/bus_marker.png" />
+    <link rel="apple-touch-icon" href="//inf.awake.su/shuttles/bus_marker.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="//inf.awake.su/shuttles/bus_marker.png"/>
+    <meta name="msapplication-square70x70logo" content="//inf.awake.su/shuttles/bus_marker.png"/>
+    <meta name="favicon" content="//inf.awake.su/shuttles/bus_marker.png"/>
+    <link rel="icon" type="image/png" href="//inf.awake.su/shuttles/bus_marker.png" />
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 
 <link rel="stylesheet" href="leaflet.css"/>
 <script src="leaflet.js"></script>
@@ -33,25 +33,25 @@
     <meta property="og:description" content="Посмотреть, где в текущий момент находится каждый шаттл Кампуса ДВФУ можно на этой карте" />
 
 
-    <meta property="og:image" content="http://inf.awake.su/shuttles/preview.jpg" />
-    <meta property="og:image:secure_url" content="http://inf.awake.su/shuttles/preview.jpg" />
+    <meta property="og:image" content="//inf.awake.su/shuttles/preview.jpg" />
+    <meta property="og:image:secure_url" content="//inf.awake.su/shuttles/preview.jpg" />
     <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:image:width" content="601" />
     <meta property="og:image:height" content="316" />
 
-    <meta property="og:image" content="http://inf.awake.su/shuttles/preview.jpg" />
-    <meta property="og:image:secure_url" content="http://inf.awake.su/shuttles/preview.jpg" />
+    <meta property="og:image" content="//inf.awake.su/shuttles/preview.jpg" />
+    <meta property="og:image:secure_url" content="//inf.awake.su/shuttles/preview.jpg" />
     <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:image:width" content="1201" />
     <meta property="og:image:height" content="631" />
 
-    <meta property="og:image" content="http://inf.awake.su/shuttles/preview.jpg" />
-    <meta property="og:image:secure_url" content="http://inf.awake.su/shuttles/preview.jpg" />
+    <meta property="og:image" content="//inf.awake.su/shuttles/preview.jpg" />
+    <meta property="og:image:secure_url" content="//inf.awake.su/shuttles/preview.jpg" />
     <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:image:width" content="256" />
     <meta property="og:image:height" content="256" />
 
-    <meta property="twitter:image" content="http://inf.awake.su/shuttles/preview.jpg" />
+    <meta property="twitter:image" content="//inf.awake.su/shuttles/preview.jpg" />
 
 <style>
 	* {
@@ -104,7 +104,7 @@ $(document).ready( function(page) {
 
     var map = L.map('buses-map').setView([43.028306, 131.89456], 14);
 
-    L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    L.tileLayer('//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '',
         maxZoom: 18
     }).addTo(map);
@@ -144,7 +144,7 @@ $(document).ready( function(page) {
 
     function updateBuses() {
         $.get(
-            "http://inf.awake.su/buses",
+            "//inf.awake.su/buses",
             function (buses) {
                 JSON.parse(buses).forEach(function (bus) {
                     if (bus.age < 90000)
@@ -198,8 +198,8 @@ $(document).ready( function(page) {
 
         <br /><br />
 
-        <script src="http://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
-        <script src="http://yastatic.net/share2/share.js"></script>
+        <script src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+        <script src="//yastatic.net/share2/share.js"></script>
         <div class="ya-share2" data-services="vkontakte,facebook,gplus,whatsapp,telegram" data-counter=""></div>
     </div>
 
